@@ -3,19 +3,20 @@
 const container = document.getElementById("container")
 
     for (let i = 0 ; i < 16 ; i++) {
-        // tileArray += container.appendChild(createTile);
-        // container.appendChild(document.createElement("div"))
         container.innerHTML += `<div class="tile"></div>`
     }
     // end of grid construction
 
 // make tile change color when hover over
 
-const tileNodeList = document.querySelector("div.tile")
+const tileNodeList = document.querySelectorAll("div.tile")
+const tileArray = Array.from(tileNodeList)
 
-//const tileArray = Array.from(tileNodeList)
 
-
-tileNodeList.addEventListener("mouseover", (event) => {
-    event.target.style.cssText = "background-color: blue";
-})
+    let i = 0;
+    while (i < 16) {
+        tileArray[i].addEventListener("mouseover", (event) => {
+            event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
+        });
+        i++
+    }
