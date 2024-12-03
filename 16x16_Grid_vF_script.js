@@ -1,102 +1,28 @@
 // Create a 16 x 16 grid of div's using js only
+const container = document.getElementById("container")
+
+
+    // end of grid construction
+
+
+
+//temporary out
+    // let i = 0;
+    // while (i < 16) {
+    //     tileArray[i].addEventListener("mouseover", (event) => {
+    //         event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
+    //     });
+    //     i++
+    // }
+    // end of color change 
 
 const body = document.querySelector("body")
-const container = document.getElementById("container")
 
 const button = document.createElement("button")
     button.textContent = "Change Grid Size"
     body.appendChild(button)
 
 
-// 16x16default
-
-
-// for (let i = 1 ; i < 17 ; i++) {
-//     container.innerHTML += `<div class="tile" id="${i}"></div>`;
-//     // const tileSelect = document.getElementById(`${i}`)
-//     // // tileSelect.addEventListener("mouseover", (event) => {
-//     // //     event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-//     // // });
-// }
-const tileNodeList = document.querySelectorAll(".tile")
-    const tileArray = Array.from(tileNodeList) 
-
-
-
-function addTile() {
-
-    const userEntry = prompt("Please enter the number of sides you would like in your grid.", "64");
-    console.log(userEntry)
-
-    for (let i = 1 ; i < userEntry ; i++) {
-        container.innerHTML += `<div class="tile"></div>`;
-        // const tileSelect = document.getElementById(`${i}`)
-        // // tileSelect.addEventListener("mouseover", (event) => {
-        // //     event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-        // // })
-    };
-
-}
-
-button.addEventListener("click", addTile)
-
-
-let i = 0;
-while (i < 100) {
-    tileArray[i].addEventListener("mouseover", (event) => {
-        event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-    });
-    i++
-}
-
-
-// for(const tile of tileArray) {
-//     tile.addEventListener("mouseover", (event) => {
-//         event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-//     });
-// };
-
-// const userEntry = prompt("Please enter the number of sides you would like in your grid.", "64");
-
-// const tracking = tileArray.map(tile => {
-//     tile.addEventListener("mouseover", (event) => {
-//         event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-//     });
-// });
-
-
-// button.addEventListener("click", callbackOne, tracking)
-
-
-// // function callbackTwo() {
-//     let i = 0;
-//     while (i < userEntry) {
-//         tileArray[i].addEventListener("mouseover", (event) => {
-//             event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-//         });
-//         i++
-//     }
-// // }
-
-
-
-// button.addEventListener("click", () => {
-//     const userEntry = prompt("Please enter the number of sides you would like in your grid.", "64");
-//     console.log(userEntry);
-//     callbackOne(userEntry);
-//     callbackTwo(tileArray);
-// });
-
-// button.addEventListener("click", function(callbackOne, callbackTwo) {
-//     const userEntry = prompt("Please enter the number of sides you would like in your grid.", "64");
-//     console.log(userEntry);
-//     callbackOne(userEntry);
-//     callbackTwo(tileArray)
-// });
-
-
-    // ``
-/*    
 for (let i = 0 ; i < 16 ; i++) {
     container.innerHTML += `<div class="tile"></div>`;
 }
@@ -114,10 +40,6 @@ while (i < 16) {
     });
     i++
 }
-*/
-//=====
-
-
 
 // this works - 2 below
 //     button.addEventListener("click", function() {
@@ -196,14 +118,3 @@ button.addEventListener('click',function(){
   console.log(eval(val1+op+val2));
 });
 document.body.appendChild(button); */
-
-
-//temporary out
-    // let i = 0;
-    // while (i < 16) {
-    //     tileArray[i].addEventListener("mouseover", (event) => {
-    //         event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-    //     });
-    //     i++
-    // }
-    // end of color change 

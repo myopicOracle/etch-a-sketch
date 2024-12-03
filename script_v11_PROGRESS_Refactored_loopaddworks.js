@@ -3,6 +3,9 @@
 const body = document.querySelector("body")
 const container = document.getElementById("container")
 
+const tileNodeList = document.querySelectorAll(".tile")
+    const tileArray = Array.from(tileNodeList)
+
 const button = document.createElement("button")
     button.textContent = "Change Grid Size"
     body.appendChild(button)
@@ -11,43 +14,32 @@ const button = document.createElement("button")
 // 16x16default
 
 
-// for (let i = 1 ; i < 17 ; i++) {
-//     container.innerHTML += `<div class="tile" id="${i}"></div>`;
-//     // const tileSelect = document.getElementById(`${i}`)
-//     // // tileSelect.addEventListener("mouseover", (event) => {
-//     // //     event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-//     // // });
-// }
-const tileNodeList = document.querySelectorAll(".tile")
-    const tileArray = Array.from(tileNodeList) 
-
-
-
-function addTile() {
-
-    const userEntry = prompt("Please enter the number of sides you would like in your grid.", "64");
-    console.log(userEntry)
-
-    for (let i = 1 ; i < userEntry ; i++) {
-        container.innerHTML += `<div class="tile"></div>`;
-        // const tileSelect = document.getElementById(`${i}`)
-        // // tileSelect.addEventListener("mouseover", (event) => {
-        // //     event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
-        // // })
-    };
-
-}
-
-button.addEventListener("click", addTile)
-
-
-let i = 0;
-while (i < 100) {
-    tileArray[i].addEventListener("mouseover", (event) => {
+for (let i = 1 ; i < 17 ; i++) {
+    container.innerHTML += `<div class="tile" id="${i}"></div>`;
+    const tileSelect = document.getElementById(`${i}`)
+    tileSelect.addEventListener("mouseover", (event) => {
         event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
     });
-    i++
 }
+    
+// user input
+
+
+function callbackOne(num) {
+    for (let i = 1 ; i < num ; i++) {
+        container.innerHTML += `<div class="tile" id="${i}"></div>`;
+        const tileSelect = document.getElementById(`${i}`)
+        tileSelect.addEventListener("mouseover", (event) => {
+            event.target.setAttribute("style", "background-color: blue; border: 6px solid gold;")
+        })
+    }   
+}
+
+button.addEventListener("click", () => {
+    const userEntry = prompt("Please enter the number of sides you would like in your grid.", "64");
+    callbackOne(userEntry);
+});
+
 
 
 // for(const tile of tileArray) {
@@ -95,7 +87,7 @@ while (i < 100) {
 // });
 
 
-    // ``
+    ``
 /*    
 for (let i = 0 ; i < 16 ; i++) {
     container.innerHTML += `<div class="tile"></div>`;
