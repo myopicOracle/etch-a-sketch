@@ -6,17 +6,16 @@ div#container {
     /* flex: auto; */
     width: 90%;
     height: 800px;
-    /* background-color: red; */
-    /* flex-flow: row wrap; */
+    flex-basis: 90%;
+    background: white;
+
 }
 
 div {
-  /* display: flex;
-  flex-flow: column wrap; */
-  flex-basis: 100px;
+  flex: 1 0.%;
   height: 20%;
   width: 20%;
-  margin: 0px;
+  margin: 0%;
   border: 4px solid purple;  
-  background-color: aliceblue;
+  background: rgb(186, 209, 229);
 };
